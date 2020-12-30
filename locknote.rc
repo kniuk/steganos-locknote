@@ -1,0 +1,1144 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_INFO                BITMAP                  "res\\info.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\locknote.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FINDNEXT,       VIRTKEY, NOINVERT
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 267, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Über Steganos LockNote..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,201,265,58,14
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP,0,0,267,185
+    PUSHBUTTON      "Website &besuchen...",IDC_VISIT_WEBSITE,7,265,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "Speichern &unter...",         57604
+        MENUITEM SEPARATOR
+        MENUITEM "&Passwort ändern...",         ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Beenden",                     ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Rückgängig\tStrg+Z",         ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tStrg+X",       ID_EDIT_CUT
+        MENUITEM "&Kopieren\tStrg+C",           ID_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "S&uchen...\tStrg+F",          ID_EDIT_FIND
+        MENUITEM "&Weitersuchen\tF3",           ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Alles &markieren\tStrg+A",    ID_EDIT_SELECT_ALL
+    END
+	POPUP "&Ansicht"
+    BEGIN
+        POPUP "&Schriftart"
+		BEGIN
+			MENUITEM "Arial",					ID_FONT_ARIAL
+			MENUITEM "Courier New",				ID_FONT_COURIER_NEW
+			MENUITEM "Lucida Console",			ID_FONT_LUCIDA_CONSOLE  // CHECKED
+			MENUITEM "Tahoma",					ID_FONT_TAHOMA
+			MENUITEM "Verdana",					ID_FONT_VERDANA
+		END
+        POPUP "Schrift&größe"
+		BEGIN
+			MENUITEM "9",						ID_VIEW_FONTSIZE_9
+			MENUITEM "10",						ID_VIEW_FONTSIZE_10	//CHECKED
+			MENUITEM "12",						ID_VIEW_FONTSIZE_12
+			MENUITEM "14",						ID_VIEW_FONTSIZE_14
+		END
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Über Steganos &LockNote",     ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote"
+    IDS_INVALID_PASSWORD    "Sie haben ein ungültiges Passwort eingegeben."
+    IDS_PASSWORD_CHANGED    "Das neue Passwort wird verwendet, wenn Sie das Dokument schließen."
+    IDS_SAVE_CHANGES        "Möchten Sie Ihre Änderungen speichern?"
+    IDS_CANT_CONVERT        "Die Datei '%s' kann nicht konvertiert werden und wird übersprungen.\n\nEs können nur Dateien mit der Endung .txt konvertiert werden."
+    IDS_ASK_CONVERT_FILES   "Sie haben eine oder mehrere Dateien auf das Textfeld gezogen.\n\nMöchten Sie diese Dateien jetzt konvertieren?"
+    IDS_TEXT_IS_ENCRYPTED   "Das Dokument enthält keinen Text und wird nicht verschlüsselt gespeichert."
+    IDS_WELCOME             "Willkommen zu Steganos LockNote.\r\n\r\nGeben Sie einen Text ein und schließen Sie Steganos LockNote, sobald Sie fertig sind. Was Sie geschrieben haben, wird mit einem Passwort, das Sie wählen, verschlüsselt.\r\n\r\nSie können auch Text-Dokumente auf Steganos LockNote ziehen, um sie ebenfalls in verschlüsselte selbstöffnende Dokumente zu verwandeln.\r\n\r\nSie können diesen Text entfernen, um mit einem leeren Dokument zu beginnen. Durch Leeren des Textfelds kann auch das Passwort zurückgesetzt werden.\r\n\r\nMehr Tipps und Tricks gibt es auf der Steganos LockNote Website:\r\n\r\nhttp://locknote.steganos.com\r\n"
+    IDS_PASSWORD            "Passwort:"
+    IDS_PASSWORD_REPEAT     "Passwort-Wiederholung:"
+	IDS_FIND_NOT_FOUND		"'%s' wurde nicht gefunden."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENTER_PASSWORD      "Bitte geben Sie das Passwort ein, das zum Öffnen des Dokuments benötigt wird."
+    IDS_ENTER_NEW_PASSWORD  "Bitte wählen Sie ein neues sicheres Passwort aus, mit dem das Dokument verschlüsselt werden soll."
+    IDS_PASSWORD_MISMATCH   "Die von Ihnen angegebenen Passwörter stimmen nicht überein."
+    IDS_PASSWORD_EMPTY      "Die Passwort-Felder sind leer. Bitte geben Sie ein Passwort an, das mindestens ein Zeichen lang ist."
+    IDS_CONVERT_DONE        "%i Datei(en) wurden konvertiert. Sie finden die verschlüsselten Dokumente im selben Ordner, wo sich die Originaldateien befinden."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Programm-Informationen, Versionsnummer und Copyright anzeigen\nÜber"
+    ID_APP_EXIT             "Beendet die Anwendung und speichert das veränderte Dokument\nBeenden"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Kopiert die Auswahl und fügt sie in die Zwischenablage ein\nKopieren"
+    ID_EDIT_CUT             "Entfernt die Auswahl und fügt sie in die Zwischenablage ein\nAusschneiden"
+    ID_EDIT_FIND            "Nach einem angegebenen Text suchen\nSuchen"
+    ID_EDIT_PASTE           "Text aus der Zwischenablage einfügen\nEinfügen"
+    ID_EDIT_SELECT_ALL      "Gesamtes Dokument auswählen\nAuswählen"
+    ID_EDIT_UNDO            "Letzte Aktion rückgängig machen\nZurücksetzen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Wählt den gesamten Text Aus\nAlles auswählen"
+	ID_VIEW_FONTSIZE		"Schriftgröße ändern"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2010 Steganos GmbH.\r\n\r\nGeschrieben von:\r\nLeonard Ritter\r\nMichael Sadoni\r\nRobert Foertsch\r\nRégis Barbier\r\n\r\nÜbersetzungen:\r\nRégis Barbier\r\nMatthijs Pinxteren\r\nHerbert Weustenenk\r\n\r\nSteganos® ist ein eingetragenes Warenzeichen in der Europäischen Union, den Vereinigten Staaten von Amerika, der Schweiz und anderen Ländern.\r\n\r\nDieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\r\n\r\nDie Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\r\n\r\nSie sollten ein Exemplar der GNU General Public License zusammen mit diesem Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA."
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 267, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,201,265,58,14
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP,0,0,267,185
+    PUSHBUTTON      "&Visit Website...",IDC_VISIT_WEBSITE,7,265,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Save &As...",                 57604
+        MENUITEM SEPARATOR
+        MENUITEM "Change Password...",          ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+	POPUP "&View"
+    BEGIN
+        POPUP "&Font"
+		BEGIN
+			MENUITEM "Arial",					ID_FONT_ARIAL
+			MENUITEM "Courier New",				ID_FONT_COURIER_NEW
+			MENUITEM "Lucida Console",			ID_FONT_LUCIDA_CONSOLE  // CHECKED
+			MENUITEM "Tahoma",					ID_FONT_TAHOMA
+			MENUITEM "Verdana",					ID_FONT_VERDANA
+		END
+        POPUP "Font &size"
+		BEGIN
+			MENUITEM "9",						ID_VIEW_FONTSIZE_9
+			MENUITEM "10",						ID_VIEW_FONTSIZE_10	//CHECKED
+			MENUITEM "12",						ID_VIEW_FONTSIZE_12
+			MENUITEM "14",						ID_VIEW_FONTSIZE_14
+		END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Steganos LockNote",    ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,5,0
+ PRODUCTVERSION 1,0,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "Steganos GmbH"
+            VALUE "FileDescription", "Steganos LockNote"
+            VALUE "FileVersion", "1, 0, 5, 0"
+            VALUE "InternalName", "LockNote"
+            VALUE "LegalCopyright", "Copyright 2006-2010 Steganos GmbH"
+            VALUE "OriginalFilename", "locknote.exe"
+            VALUE "ProductName", "Steganos LockNote"
+            VALUE "ProductVersion", "1, 0, 5, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote"
+    IDS_INVALID_PASSWORD    "You supplied an invalid password."
+    IDS_PASSWORD_CHANGED    "The new password will be applied when you close the document."
+    IDS_SAVE_CHANGES        "Do you want to save your changes?"
+    IDS_CANT_CONVERT        "The file '%s' can not be converted and will be skipped.\n\nOnly files with the extension .txt can be converted."
+    IDS_ASK_CONVERT_FILES   "You dropped one or several files onto this document.\n\nDo you want to convert these files?"
+    IDS_TEXT_IS_ENCRYPTED   "There is no text in the exported document.\nThe document will not be encrypted."
+    IDS_WELCOME             "Welcome to Steganos LockNote.\r\n\r\nType some text and close Steganos LockNote when you are done. What you typed will be encrypted using a password, which you supply.\r\n\r\nYou can also drop text documents on Steganos LockNote to turn them into encrypted self-opening documents as well.\r\n\r\nYou can start over by removing all text. You can also clear the text field to reset the password.\r\n\r\nGet more tips and tricks from the Steganos LockNote website:\r\n\r\nhttp://locknote.steganos.com\r\n"
+    IDS_PASSWORD            "Password:"
+    IDS_PASSWORD_REPEAT     "Repeat Password:"
+	IDS_FIND_NOT_FOUND		"'%s' could not be found."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENTER_PASSWORD      "Please enter the password required to open this document."
+    IDS_ENTER_NEW_PASSWORD  "Please choose a new secure password to encrypt this document."
+    IDS_PASSWORD_MISMATCH   "The passwords which you have entered do not match."
+    IDS_PASSWORD_EMPTY      "The password fields are empty. Please enter a password with a length of at least one character."
+    IDS_CONVERT_DONE        "%i file(s) have been converted. You find the encrypted documents where the original files are residing."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Select all text\nSelect All"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2010 Steganos GmbH\r\n\r\nWritten by:\r\nLeonard Ritter\r\nMichael Sadoni\r\nRobert Foertsch\r\nRégis Barbier\r\n\r\nTranslations:\r\nRégis Barbier\r\nMatthijs Pinxteren\r\nHerbert Weustenenk\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Annuler",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 267, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "A propos de Steganos LockNote..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,201,265,58,14
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP,0,0,267,185
+    PUSHBUTTON      "&Visiter le site Internet...",IDC_VISIT_WEBSITE,7,265,
+                    91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "Enregistrer &sous...",        57604
+        MENUITEM SEPARATOR
+        MENUITEM "Changer le mot de passe...",  ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_APP_EXIT
+    END
+    POPUP "&Edition"
+    BEGIN
+        MENUITEM "&Annuler\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Couper\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Co&pier\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "C&oller\tCtrl+V",             ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Rec&hercher...\tCtrl+F",      ID_EDIT_FIND
+        MENUITEM "Rechercher le sui&vant\tF3",  ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Sélectionner &tout\tCtrl+A",  ID_EDIT_SELECT_ALL
+    END
+	POPUP "Aff&ichage"
+    BEGIN
+        POPUP "&Police"
+		BEGIN
+			MENUITEM "Arial",					ID_FONT_ARIAL
+			MENUITEM "Courier New",				ID_FONT_COURIER_NEW
+			MENUITEM "Lucida Console",			ID_FONT_LUCIDA_CONSOLE  // CHECKED
+			MENUITEM "Tahoma",					ID_FONT_TAHOMA
+			MENUITEM "Verdana",					ID_FONT_VERDANA
+		END
+        POPUP "&Taille de police"
+		BEGIN
+			MENUITEM "9",						ID_VIEW_FONTSIZE_9
+			MENUITEM "10",						ID_VIEW_FONTSIZE_10	//CHECKED
+			MENUITEM "12",						ID_VIEW_FONTSIZE_12
+			MENUITEM "14",						ID_VIEW_FONTSIZE_14
+		END
+    END
+    POPUP "&Aide"
+    BEGIN
+        MENUITEM "&A propos de Steganos LockNote", ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote"
+    IDS_INVALID_PASSWORD    "Vous avez fourni un mot de passe invalide."
+    IDS_PASSWORD_CHANGED    "Le nouveau mot de passe sera appliqué quand vous fermerez le document."
+    IDS_SAVE_CHANGES        "Voulez-vous sauvegarder vos modifications?"
+    IDS_CANT_CONVERT        "Le fichier '%s' ne peut être converti et sera ignoré.\n\nSeuls les fichiers avec l'extension .txt peuvent être convertis."
+    IDS_ASK_CONVERT_FILES   "Vous avez glissé un ou plusieurs fichiers sur ce document.\n\nSouhaitez-vous convertir ces fichiers ?"
+    IDS_TEXT_IS_ENCRYPTED   "Il n'y a pas de texte dans le document exporté.\nLe document ne sera pas encrypté."
+    IDS_WELCOME             "Bienvenue dans Steganos LockNote.\r\n\r\nTapez ici un peu de texte et fermez Steganos LockNote quand vous avez terminé. Ce que vous avez tapé sera encrypté à l'aide d'un mot de passe, que vous fournirez.\r\n\r\nVous pouvez aussi glisser des documents sur la fenêtre de Steganos LockNote pour les convertir en documents encryptés s'ouvrant par eux-mêmes.\r\n\r\nVous pouvez commencer en remplaçant ce texte. Vous pouvez également effacer la zone de texte pour ré-initialiser le mot de passe.\r\n\r\nObtenez d'autres trucs et astuces depuis le site Internet de Steganos LockNote:\r\n\r\nhttp://locknote.steganos.com\r\n"
+    IDS_PASSWORD            "Mot de passe :"
+    IDS_PASSWORD_REPEAT     "Répétez le mot de passe :"
+	IDS_FIND_NOT_FOUND		"'%s' introuvable."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENTER_PASSWORD      "Veuillez taper le mot de passe requis pour ouvrir ce document."
+    IDS_ENTER_NEW_PASSWORD  "Veuillez choisir un nouveau mot de passe sûr pour encrypter ce document."
+    IDS_PASSWORD_MISMATCH   "Les mots de passe que vous avez tapés ne correspondent pas."
+    IDS_PASSWORD_EMPTY      "Les zones de mot de passe sont vides. Veuillez taper un mot de passe d'une longueur d'au moins un caractère."
+    IDS_CONVERT_DONE        "%i fichier(s) converti(s). Vous trouverez les documents encryptés là où les fichiers d'origine sont situés."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Affiche les informations sur le programme, le numéro de version et le copyright\nA propos"
+    ID_APP_EXIT             "Quitte l'application, demande de sauvegarder les documents\nQuitter"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copie la sélection et la place dans le presse-papier\nCopier"
+    ID_EDIT_CUT             "Coupe la sélection et la place dans le presse-papier\nCouper"
+    ID_EDIT_FIND            "Recherche le texte spécifié\nRechercher"
+    ID_EDIT_PASTE           "Insère le contenu du presse-papier\nColler"
+    ID_EDIT_SELECT_ALL      "Sélectionne tout le document\nSélectionner tout"
+    ID_EDIT_UNDO            "Annule la dernière action\nAnnuler"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Sélectionner tout le texte\nSélectionner tout"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2010 Steganos GmbH\r\n\r\nécrit par :\r\nLeonard Ritter\r\nMichael Sadoni\r\nRobert Foertsch\r\nRégis Barbier\r\n\r\nTraductions:\r\nRégis Barbier\r\nMatthijs Pinxteren\r\nHerbert Weustenenk\r\n\r\nSteganos® est une marque déposée dans l'Union Européenne, les Etats-Unis d'Amérique, la Suisse et autres pays.\r\n\r\nCe programme est un logiciel libre; vous pouvez le re-distribuer et/ou le modifier selon les termes de la 'General Public License' de GNU publiée par la 'Free Software Foundation'; version 2 de la licence, ou (à votre convenance) toute autre version ultérieure.\r\n\r\nCe programme est distribué avec l'espoir qu'il vous sera utile, mais SANS AUCUNE GARANTIE; également sans même la garantie implicite d'être COMMERCIALISABLE ou de correspondre à un USAGE SPECIFIQUE. Voyez la 'General Public License' de GNU pour plus de détails.\r\n\r\nVous devriez avoir reçu une copie de la 'General Public License' de GNU fournie avec ce programme; dans le cas contraire, vous pouvez écrire à : Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Spain) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Aceptar",IDOK,120,102,50,14
+    PUSHBUTTON      "&Cancelar",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 267, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de Steganos LockNote..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Aceptar",IDOK,201,265,58,14
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP,0,0,267,185
+    PUSHBUTTON      "&Visite el sitio Web...",IDC_VISIT_WEBSITE,7,265,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Archivo"
+    BEGIN
+        MENUITEM "Guardar &como...",					57604
+        MENUITEM SEPARATOR
+        MENUITEM "Cambiar contraseña...",				ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "&Salir",								ID_APP_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "&Deshacer\tCtrl+Z",					ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cor&tar\tCtrl+X",						ID_EDIT_CUT
+        MENUITEM "&Copiar\tCtrl+C",						ID_EDIT_COPY
+        MENUITEM "&Pegar\tCtrl+V",						ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Buscar...\tCtrl+F",					ID_EDIT_FIND
+        MENUITEM "Buscar &siguiente\tF3",				ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Seleccionar &todo\tCtrl+A",			ID_EDIT_SELECT_ALL
+    END
+	POPUP "&Ver"
+    BEGIN
+        POPUP "&Fuente"
+		BEGIN
+			MENUITEM "Arial",					ID_FONT_ARIAL
+			MENUITEM "Courier New",				ID_FONT_COURIER_NEW
+			MENUITEM "Lucida Console",			ID_FONT_LUCIDA_CONSOLE  // CHECKED
+			MENUITEM "Tahoma",					ID_FONT_TAHOMA
+			MENUITEM "Verdana",					ID_FONT_VERDANA
+		END
+        POPUP "&Tamaño de fuente"
+		BEGIN
+			MENUITEM "9",						ID_VIEW_FONTSIZE_9
+			MENUITEM "10",						ID_VIEW_FONTSIZE_10	//CHECKED
+			MENUITEM "12",						ID_VIEW_FONTSIZE_12
+			MENUITEM "14",						ID_VIEW_FONTSIZE_14
+		END
+    END
+    POPUP "Ay&uda"
+    BEGIN
+        MENUITEM "&Acerca de Steganos LockNote",		ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote"
+    IDS_INVALID_PASSWORD    "La contraseña no es válida."
+    IDS_PASSWORD_CHANGED    "Se aplicará la contraseña nueva cuando cierre el documento."
+    IDS_SAVE_CHANGES        "¿Desea guardar los cambios?"
+    IDS_CANT_CONVERT        "El archivo '%s' no se puede convertir y se omitirá.\n\nSolamente se pueden convertir los archivos con la extensión .txt."
+    IDS_ASK_CONVERT_FILES   "Ha colocado uno o más archivos en este documento.\n\n¿Desea convertir estos archivos?"
+    IDS_TEXT_IS_ENCRYPTED   "El documento exportado no contiene texto.\nEl documento no se codificará."
+    IDS_WELCOME             "Bienvenido a Steganos LockNote.\r\n\r\nEscriba el texto y cierre Steganos LockNote al finalizar. Lo que escriba se codificará con la contraseña que usted proporcione.\r\n\r\nTambién puede colocar documentos de texto en Steganos LockNote para convertirlos en documentos codificados que se abren automáticamente.\r\n\r\nPara empezar de nuevo, borre todo el texto. También puede borrar el campo de texto para restablecer la contraseña.\r\n\r\nObtenga más sugerencias en el sitio Web de Steganos LockNote:\r\n\r\nhttp://locknote.steganos.com\r\n"
+    IDS_PASSWORD            "Contraseña:"
+    IDS_PASSWORD_REPEAT     "Repita la contraseña:"
+	IDS_FIND_NOT_FOUND		"'%s' no pudo ser encontrado."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENTER_PASSWORD      "Escriba la contraseña requerida para abrir este documento."
+    IDS_ENTER_NEW_PASSWORD  "Elija una nueva contraseña segura para codificar este documento."
+    IDS_PASSWORD_MISMATCH   "Las contraseñas escritas no coinciden."
+    IDS_PASSWORD_EMPTY      "Los campos de contraseña están vacíos. Escriba una contraseña con una longitud de al menos un carácter."
+    IDS_CONVERT_DONE        "Se ha(n) convertido %i archivo(s). Los documentos codificados se encuentran donde residen los archivos originales."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Información, número de versión y copyright del programa\nAcerca de"
+    ID_APP_EXIT             "Sale de la aplicación; indica que se guarden los documentos\nSalir"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copia la selección y la coloca en el Portapapeles\nCopiar"
+    ID_EDIT_CUT             "Corta la selección y la coloca en el Portapapeles\nCortar"
+    ID_EDIT_FIND            "Busca el texto especificado\nBuscar"
+    ID_EDIT_PASTE           "Inserta el contenido del Portapapeles\nPegar"
+    ID_EDIT_SELECT_ALL      "Selecciona el documento completo\nSeleccionar todo"
+    ID_EDIT_UNDO            "Deshace la última acción\nDeshacer"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Selecciona todo el texto\nSeleccionar todo"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2010 Steganos GmbH\r\n\r\nEscrito por:\r\nLeonard Ritter\r\nMichael Sadoni\r\nRobert Foertsch\r\nRégis Barbier\r\n\r\nTraducciones:\r\nRégis Barbier\r\nMatthijs Pinxteren\r\nHerbert Weustenenk\r\n\r\nSteganos® es una marca comercial registrada en la Unión Europea, en los Estados Unidos de América, en Suiza y en otros países.\r\n\r\nEste programa es un software gratuito; usted puede redistribuirlo y modificarlo bajo los términos de la Licencia Pública General GNU publicada por Free Software Foundation; ya sea la versión 2 de la licencia o cualquier versión posterior (a su discreción).\r\n\r\nEste programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; no incluye ni siguiera la garantía implícita de COMERCIABILIDAD o ADECUACIÓN PARA UN FIN PARTICULAR. Consulte la Licencia Pública General GNU para obtener más detalles.\r\n\r\nDebería haber recibido una copia de la Licencia Pública General GNU junto con este programa; si no la recibió, escriba a Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+END
+
+#endif    // Spanish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Nederlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLB)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialoog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Annuleren",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 267, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Over Steganos Locknote..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,201,265,58,14
+    CONTROL         202,IDC_STATIC,"Static",SS_BITMAP,0,0,267,185
+    PUSHBUTTON      "&Bezoek Website...",IDC_VISIT_WEBSITE,7,265,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Bestand"
+    BEGIN
+        MENUITEM "Opslaan &als...",						57604
+        MENUITEM SEPARATOR
+        MENUITEM "Wachtwoord veranderen...",			ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Af&sluiten",							ID_APP_EXIT
+    END
+    POPUP "Be&werken"
+    BEGIN
+        MENUITEM "&Ongedaan maken\tCtrl+Z",				ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Knip&pen\tCtrl+X",					ID_EDIT_CUT
+        MENUITEM "&Kopiëren\tCtrl+C",					ID_EDIT_COPY
+        MENUITEM "&Plakken\tCtrl+V",					ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoeken...\tCtrl+F",					ID_EDIT_FIND
+        MENUITEM "Volgende &Zoeken\tF3",				ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Selecteer &Alles\tCtrl+A",			ID_EDIT_SELECT_ALL
+    END
+	POPUP "B&ekijken"
+    BEGIN
+        POPUP "&Letter"
+		BEGIN
+			MENUITEM "Arial",					ID_FONT_ARIAL
+			MENUITEM "Courier New",				ID_FONT_COURIER_NEW
+			MENUITEM "Lucida Console",			ID_FONT_LUCIDA_CONSOLE  // CHECKED
+			MENUITEM "Tahoma",					ID_FONT_TAHOMA
+			MENUITEM "Verdana",					ID_FONT_VERDANA
+		END
+        POPUP "&Lettergrootte"
+		BEGIN
+			MENUITEM "9",						ID_VIEW_FONTSIZE_9
+			MENUITEM "10",						ID_VIEW_FONTSIZE_10	//CHECKED
+			MENUITEM "12",						ID_VIEW_FONTSIZE_12
+			MENUITEM "14",						ID_VIEW_FONTSIZE_14
+		END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Over Steganos Locknote",				ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote"
+    IDS_INVALID_PASSWORD    "U heeft een verkeerd wachtwoord ingevoerd."
+    IDS_PASSWORD_CHANGED    "Het nieuwe wachtwoord zal in gebruik genomen worden zodra het document herstart is."
+    IDS_SAVE_CHANGES        "Wilt u de wijzigingen opslaan?"
+    IDS_CANT_CONVERT        "Het bestand '%s' kan niet geconverteerd worden en zal worden overgeslagen.\n\nAlleen bestanden met de extensie .txt kunnen worden geconverteerd."
+    IDS_ASK_CONVERT_FILES   "U heeft verschillende bestanden toegevoegd.\n\nWilt u deze bestanden converteren?"
+    IDS_TEXT_IS_ENCRYPTED   "Er is geen tekst in het bestand.\nHet document zal niet worden versleuteld."
+    IDS_WELCOME             "Welkom bij Steganos LockNote.\r\n\r\nVoer tekst in en sluit LockNote wanneer u klaar bent. Wat u typt zal worden versleuteld met een wachtwoord, wat u zelf bepaalt.\r\n\r\nU kunt ook tekstbestanden invoeren in LockNote om ze te veranderen in versleutelde zelf-openende documenten.\r\n\r\nU kunt nu beginnen door alle tekst hier te verwijderen. U kunt ook alle tekst verwijderen om het wachtwoord te resetten.\r\n\r\nMeer tips op de officiële website:\r\n\r\nhttp://locknote.steganos.com\r\n"
+    IDS_PASSWORD            "Wachtwoord:"
+    IDS_PASSWORD_REPEAT     "Herhaal wachtwoord:"
+	IDS_FIND_NOT_FOUND		"'%s' kon niet worden gevonden."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENTER_PASSWORD      "Voer het wachtwoord in voor dit document."
+    IDS_ENTER_NEW_PASSWORD  "Voer een nieuw wachtwoord in om dit document te versleutelen."
+    IDS_PASSWORD_MISMATCH   "U heeft een incorrect wachtwoord ingevoerd."
+    IDS_PASSWORD_EMPTY      "De wachtwoord velden zijn leeg. Voer een wachtwoord in met op zijn minst één letter of cijfer."
+    IDS_CONVERT_DONE        "%i bestand(en) zijn geconverteerd. De versleutelde bestanden vindt u op de plaats waar ook de orginele bestanden staan."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Toont programma informatie, versie nummer en copyright\nAbout"
+    ID_APP_EXIT             "Sluit programma; vraagt of u wijzigingen wilt opslaan\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Kopieer de selectie naar Windows Clipboard\nCopy"
+    ID_EDIT_CUT             "Knip de selectie naar Windows Clipboard\nCut"
+    ID_EDIT_FIND            "Zoek naar bepaalde tekst\nFind"
+    ID_EDIT_PASTE           "Voer Windows Clipboard inhoud in\nPaste"
+    ID_EDIT_SELECT_ALL      "Selecteer het gehele document\nSelect All"
+    ID_EDIT_UNDO            "Maak laatste actie ongedaan\nUndo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Selecteer alle tekst\nSelect all"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2010 Steganos GmbH.\r\n\r\nGescheven door:\r\nLeonard Ritter\r\nMichael Sadoni\r\nRobert Foertsch\r\nRégis Barbier\r\n\r\nVertalingen:\r\nRégis Barbier\r\nMatthijs Pinxteren\r\nHerbert Weustenenk\r\n\r\nSteganos® is een geregistreerd merk in de Europese Unie, de Verenigde Staten van Amerika, Zwitserland en andere landen.\r\n\r\nDit programma is gratis software; u kunt het opnieuw uitgeven en/of het programma aanpassen onder de termen van de GNU General Public License gepubliceerd onder de Free Software Foundation; onder de tweede versie, of (uw keuze) latere versies.\r\n\r\nDit programma is uitgegeven in de hoop dat het handig zal zijn, maar ZONDER ENIGE GARANTIE; zonder zelfs de inbegrepen garantie van MERCHANTABILITY of GESCHIKTHEID VOOR PARTICULIER GEBRUIK. Zie de GNU General Public License voor meer details.\r\n\r\nU zou een kopie van de GNU General Public License moeten hebben gekregen met dit programma; zo niet, schijf naar de Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+END
+
+#endif    // Dutch resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\locknote.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

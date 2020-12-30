@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LockNote", "locknote.vcproj", "{2B0F0501-E457-4E76-A121-E27A60B9CA15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B0F0501-E457-4E76-A121-E27A60B9CA15}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2B0F0501-E457-4E76-A121-E27A60B9CA15}.Debug|Win32.Build.0 = Debug|Win32
+		{2B0F0501-E457-4E76-A121-E27A60B9CA15}.Release|Win32.ActiveCfg = Release|Win32
+		{2B0F0501-E457-4E76-A121-E27A60B9CA15}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
